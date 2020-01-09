@@ -17,7 +17,6 @@ public class ChatController {
         HashMap hashMap = new HashMap();
         GoEasy goEasy = new GoEasy( "http://rest-hangzhou.goeasy.io", "BC-55c2cbbdd73e4c49940147d6a9c6ddc5");
         String ss = JSONUtils.toJSONString(message);
-        System.out.println("message = " + message);
         goEasy.publish("cmfz", ss);
         hashMap.put("cmfz",ss);
         return hashMap;
